@@ -1,0 +1,53 @@
+<!--black hole image: https://pixabay.com/p-1991881/?no_redirect-->
+<!--sun image: http://res.freestockphotos.biz/pictures/15/15147-illustration-of-the-sun-pv.png-->
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+p {
+    box-shadow: 2px 20px 100px black; /*2px: left/right 20px: up/down 100px:amt blur*/
+    font-size: 50px;
+     transition: font-size 4s;/*change font size during 4 sec*/
+     color: white;
+}
+p:hover {
+    font-size: 300px; 
+    transform: rotateY(180deg); /*flip the words, leonardo da vinci writing style*/
+}
+div {
+    width: 1000px;
+    height: 1000px;
+    background-image: url("sun.png");;
+    animation-name: sun;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; /*animation of sun goes forever*/
+    position: absolute;
+}
+
+
+@keyframes sun {
+   0%  {opacity: 1; left:0px; top:0px;}
+    50%  {opacity: 0.5; left:500px; top:500px;}
+    100% {opacity: 0; left:1000px; top:600px;}
+}
+body {
+    background: linear-gradient(#1d1c49, #000207); /*dark blue to black*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+blackhole {
+    width: 200px;
+    height: 200px;
+    /*transform: translateX( -100% ) rotateY( -180deg );*/
+
+}
+</style>
+</head>
+<body>
+<p><b>black hole</b></p>
+<img src="hole.png" id="blackhole">
+
+<div></div>
+
+</body>
+</html>
